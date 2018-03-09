@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-08T19:22:25-05:00</updated><id>http://localhost:4000/</id><title type="html">Marc Laforet</title><subtitle>Empowering your business to make data-driven decisions</subtitle><entry><title type="html">The Problem with p-values</title><link href="http://localhost:4000/The-problem-with-p-values/" rel="alternate" type="text/html" title="The Problem with p-values" /><published>2018-01-15T00:00:00-05:00</published><updated>2018-01-15T00:00:00-05:00</updated><id>http://localhost:4000/The-problem-with-p-values</id><content type="html" xml:base="http://localhost:4000/The-problem-with-p-values/">&lt;p&gt;Like most people, I used to consider statistics a plague that I should try to avoid. However, my time as a medical researcher transformed my opinion because I realized how paramount accurate statistics were in making robust and reproducible conclusions. Luckily, I had come into contact with a professor that transformed my take on the p-value. He did this by showing me just how misleading it can be, which I hope to share with you.&lt;/p&gt;
+
+&lt;p&gt;Let’s consider the student’s t-test, which is a procedure that determines if two groups of data are different. For example, perhaps a company wants to know if their product is bought more by men or women, a doctor wants to know if their patients taking a treatment has improved their symptoms, or a group of friends are planning their next vacation and want to know if hotels cost more in New York City or San Fransisco.&lt;/p&gt;
+
+&lt;p&gt;Let’s consider our last example. Our hypothesis is that there is a relationship between hotel price and the city we visit. Our null hypothesis is that there is no relationship between the price of the hotel and the city that it is in. Assuming that this data would follow a normal distribution, let’s simulate some data. We’ll pretend that four best friends compiled the price per night of 100 hotels in San Fransisco and found that the average price was $100 with variation of +/- $25 (n=100, u=100, sd=25).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/p-values/random_samples.jpeg&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These four friends plotted the resulting distributions in a histogram with a density plot overlaid. Note that each friend has observed a different distribution of hotel prices, determined by which hotels they looked at. Perhaps friend 2 has more expensive taste whereas friend 4 is more thrifty. Nevertheless, it is important to consider what this means for p-values when we compare two distributions?&lt;/p&gt;
+
+&lt;p&gt;Let’s say that these four best friends repeated this for hotels in New York City and tried to determine which city had more expensive hotels by completing a t-test. One of two things can happen. Case 1: The prices of the hotels in the two cities are different or Case 2: there is no difference.&lt;/p&gt;
+
+&lt;p&gt;For Case 1, let’s say that the friends collected data from 100 NYC hotels and found that they cost on average $80 a night with standard deviation of $25. Completing the students t-test and calculating the p-value, the friends compare their findings.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/p-values/hotel_diff.jpeg&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given their extremely small p-values, all four friends conclude that hotels in NYC are cheaper than San Fransisco. Importantly, all four friends got different p-values depending on the data that they collected. Let’s say that these friends are really popular and have 500 additional friends that are planning to join them on the trip.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/p-values/diff_pvalues.jpeg&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If they all completed this analysis and recorded their p-values, we could expect a distribution of p-values seen on the left. Although we mostly get a p-value below our 0.05 threshold, there are times where a friend gets a p-value that is above 0.05. In these instances, that friend would have concluded that there was no difference between hotel prices, even though there is. ALARMING!&lt;/p&gt;
+
+&lt;p&gt;Even more alarming, let’s consider Case 2, where the data suggests that there is no difference between hotel prices in NYC and San Fran.&lt;/p&gt;
+
+&lt;p&gt;Here, three out of the four friends would have concluded that there is no difference between hotel prices. However, friend number four received a p-value that is below 0.05 and would have thought that there is a difference, even though there isn’t. Who knows? Maybe this would have caused a huge fight and they wouldn’t be friends anymore…that’s just sad.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/p-values/hotel_same.jpeg&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Before the three friends unfriend the fourth friend, they decide to consult with their 500 additional friends to compare their p-values.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/p-values/same_pvalues.jpeg&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They are shocked to discover that when there is no difference between the prices of hotels, the p-value is effectively random! Although most of the friends would have reached the same conclusion, there is a group that would have concluded that there is a difference… even though there wasn’t one.&lt;/p&gt;
+
+&lt;p&gt;Recall that the correct interpretation of a p-value is: 
+	Assuming that your null is true, a p-value quantifies the probability of seeing a data point at or beyond your current observation.&lt;/p&gt;
+
+&lt;p&gt;Basically, you calculate a 95% confidence interval of where you expect your data to be. If you observe a value that is outside these bounds, it is unexpected as it is within the most extreme 5% of your data and supports your null hypothesis. If you want to be more lenient to variation, you might calculate a 97.5% confidence interval and only allow observations with p-values of 0.025 to disapprove your hypothesis. The best way to combat the fickle p-value is to increase the number of replicates that you do and see if your p-value jumps around or if it stays consistently low. Here I have coded an interactive visualization that will allow you to change the parameters of the two distributions and see the resulting p-value distribution. If you want to read more, I would recommend this paper. Code to regenerate this can be found in this repository.&lt;/p&gt;</content><author><name></name></author><category term="blogpost" /></entry><entry><title type="html">Visualizing Distributions</title><link href="http://localhost:4000/Visualizing-Distributions/" rel="alternate" type="text/html" title="Visualizing Distributions" /><published>2017-12-22T00:00:00-05:00</published><updated>2017-12-22T00:00:00-05:00</updated><id>http://localhost:4000/Visualizing-Distributions</id><content type="html" xml:base="http://localhost:4000/Visualizing-Distributions/">&lt;p&gt;You have munged all the necessary data into a clean format, you’ve appropriately performed a snazzy statistical analysis and now it’s time to analyze the results. This is where visualizing your data comes in handy. Informative data visualizations not only reveal novel insights, maybe you were dating someone and didn’t even know it, but they are truly invaluable when it comes time to communicate your findings to your boss/client.&lt;/p&gt;
+
+&lt;p&gt;This post will specifically look into a visualization task that I’ve faced time and time again. Over the years of analyzing data, I often find myself wanting to compare and contrast multiple distributions of numeric data. This can be tricky depending on how different the distributions are, compounded by the vast number of possible representation methods for distributions (http://www.darkhorseanalytics.com/blog/visualizing-distributions-3). I commonly have one of two objectives when comparing distributions, either I want to highlight differences in their outliers or, often subtle, differences in their respective spreads. Maybe I want to show how datasets gathered with distinct criteria responded differently to a statistical procedure or how applying a statistical correction improved a scoring function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/viz_distributions/boxplot.png&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I tend to favour box plots if I’m interested in comparing outliers. Box plots show the overall spread of the data while plotting a data point for outliers. This physical point allows their specific values to be easily identified and compared among samples.&lt;/p&gt;
+
+&lt;p&gt;Let’s ignore what the data actually means as that’s not important. You can see that the spread of the distributions are more or less equal and that the outliers are easily compared. The distribution coloured red/magenta has the most extreme outlier followed by the point that I coloured red from the green distribution. For this analysis, the red distribution had been previously calculated and I was able to reproduce their data by observing the extreme outlier. The red point however, was a novel observation.&lt;/p&gt;
+
+&lt;p&gt;If you’re a person that pays attention to the plot axis and understand a little stats, then you might have realized that I applied a statistical transformation to my dataset in order to amplify the differences in the distribution outliers. I transformed my numerical distribution to a z-score. A z-score transforms the data points by measuring the number of standard deviations away they are from the sample mean.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/viz_distributions/histogram.png&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first visualization I usually make for distributions is a histogram. You can see here that this is a terrible and uninformative way to look at the data. The differences in the sample sizes between the different groups makes them incomparable using this method. It is so extreme that you can no longer see the blue distribution. This visualization also fails at comparing or even seeing the outliers. The only thing I can conclude from this visual is that the red and green distributions have roughly the same mean.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/viz_distributions/strip_plot.png&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Although I think that box plots were the best option in this case, they can seem very formal and people often don’t know how to interpret them properly (Interquartile ranges, distributions, say what?). Additionally, box plots give no insight into the sample size used to create them. A strip plot can be more intuitive for a less statistically minded audience because they can see all the data points. This plot also gives an insight into the sample size of the distribution. I like to apply jitter and opacity to the points to make these plots more appealing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/viz_distributions/histogram_lots.png&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s jump into our second case, where we are interested in comparing the spreads of the distributions. Here, histograms are a good option if the distributions being compared have the same sample size and you are making at most 3 comparisons. Otherwise you will end up with a really busy plot that makes it very hard to see the data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/viz_distributions/denisty.png&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I gravitate towards kernel density plots with no fill for these cases. It isn’t that pretty but you can actually see and compare the distributions. To overcome this in a recent project, I decided to implement a spin on the histogram and use a variation called the step plot that worked out great. I would suggest changing the way that you are representing your data if your plots are getting unwieldily.&lt;/p&gt;
+
+&lt;p&gt;But what if you want it all?! In this case I like to use a violin plot. I have seen these plots becoming more popular and there are many variations that make them even more powerful. They are essentially boxplots that have a rotated kernel density plot around them. Here I plotted the boxplots inside the rotated kernel density plot.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/viz_distributions/violin.png&quot; alt=&quot;jekyll Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That is all I have for you for now. I made all the plots above using the ggplot2 package in R. I also make quite a few plots in python using matplotlib and sometimes seaborne. The dataset used in case 2 was done using the airquality dataset shipped with R and the other dataset was built by myself for my masters thesis.&lt;/p&gt;</content><author><name></name></author><category term="blogpost" /></entry></feed>

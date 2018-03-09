@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualizing Distributions – Marc Laforet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="blogpost">
+    <link rel="canonical" href="http://localhost:4000/Visualizing-Distributions/">
+        <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Visualizing Distributions">
+    <meta name="twitter:description" content="">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/robot.png">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Visualizing Distributions">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://localhost:4000/Visualizing-Distributions/">
+    <meta property="og:site_name" content="Marc Laforet">
+    <meta property="og:image" content="http://localhost:4000/assets/img/robot.png">
+
+    
+    
+    <!-- Handheld -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    
+<link rel="shortcut icon" href="http://localhost:4000/assets/img/favicon/favicon.ico">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Marc Laforet" href="http://localhost:4000/feed.xml">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css">
+    <!-- Sweet Scroll -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/sweet-scroll.min.js"></script>
+    <!-- Particle System -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/particles.min.js"></script>
+</head>
+
+  <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        i = 0;
+        $('.menuAc').css({
+          'color': 'rgba(52, 152, 219, 1)'
+        });
+        $('.menuAc').click(function(){
+          $(this).next('.menuMobil').animate({width:'toggle'},350);
+          if (i%2==0) {
+            $('.footer').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('ul.menu').css({
+              'animation-duration': '0.1s'
+            });
+            i++;
+          }
+          else {
+            $('.footer').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(0px)'
+            });
+            i++;
+          }
+
+        });
+      });
+/* sweetScroll load */
+      document.addEventListener("DOMContentLoaded", function () {
+        const sweetScroll = new SweetScroll({/* some options */});
+
+        /* particlesJS.load(<a href="https://github.com/dom-id" class="user-mention">@dom-id</a>, <a href="https://github.com/path-json" class="user-mention">@path-json</a>, <a href="https://github.com/callback" class="user-mention">@callback</a> (optional)); */
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 100,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "polygon",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100,
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 19.18081918081918,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            },
+            nb: 80
+          },
+          "interactivity": {
+            "detect_on": "window",
+            "events": {
+              "onhover": {
+                "enable": false,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+
+      }, false);
+    </script>
+    <div id="particles-js" style="height: 700%; position: absolute; width: 100vw;"></div>
+    <div class="menuAc">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="menuMobil">
+          <nav class="nav-home">
+      <ul class="menu">
+            
+				    
+				    
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="#about" data-scroll>About</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Portfolio</a></li>
+				    
+				
+        </ul>
+    </nav>
+
+    </div>
+    <div class="ust">
+      <div class="ortalaAna">
+        <div class="baslikAna">
+          Marc Laforet
+        </div>
+
+        <div class="pc">
+              <nav class="nav">
+        <ul class="menuAna">
+            
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/">Home</a></li>
+				    
+			
+				    
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Portfolio</a></li>
+				    
+			
+        </ul>
+    </nav>
+
+        </div>
+      </div>
+    </div>
+    <div class="ortalaAna">
+      <div class="yazilar">
+        <div class="yazi">
+          <div class="ustr">
+            <h2>Visualizing Distributions</h2>
+            <div class="yazibilgisi">
+              22 Dec 2017 Marc Laforet
+            </div>
+          </div>
+          <hr>
+          <div class="content">
+            <p>You have munged all the necessary data into a clean format, you’ve appropriately performed a snazzy statistical analysis and now it’s time to analyze the results. This is where visualizing your data comes in handy. Informative data visualizations not only reveal novel insights, maybe you were dating someone and didn’t even know it, but they are truly invaluable when it comes time to communicate your findings to your boss/client.</p>
+
+<p>This post will specifically look into a visualization task that I’ve faced time and time again. Over the years of analyzing data, I often find myself wanting to compare and contrast multiple distributions of numeric data. This can be tricky depending on how different the distributions are, compounded by the vast number of possible representation methods for distributions (http://www.darkhorseanalytics.com/blog/visualizing-distributions-3). I commonly have one of two objectives when comparing distributions, either I want to highlight differences in their outliers or, often subtle, differences in their respective spreads. Maybe I want to show how datasets gathered with distinct criteria responded differently to a statistical procedure or how applying a statistical correction improved a scoring function.</p>
+
+<p><img src="http://localhost:4000/assets/img/viz_distributions/boxplot.png" alt="jekyll Image"></p>
+
+<p>I tend to favour box plots if I’m interested in comparing outliers. Box plots show the overall spread of the data while plotting a data point for outliers. This physical point allows their specific values to be easily identified and compared among samples.</p>
+
+<p>Let’s ignore what the data actually means as that’s not important. You can see that the spread of the distributions are more or less equal and that the outliers are easily compared. The distribution coloured red/magenta has the most extreme outlier followed by the point that I coloured red from the green distribution. For this analysis, the red distribution had been previously calculated and I was able to reproduce their data by observing the extreme outlier. The red point however, was a novel observation.</p>
+
+<p>If you’re a person that pays attention to the plot axis and understand a little stats, then you might have realized that I applied a statistical transformation to my dataset in order to amplify the differences in the distribution outliers. I transformed my numerical distribution to a z-score. A z-score transforms the data points by measuring the number of standard deviations away they are from the sample mean.</p>
+
+<p><img src="http://localhost:4000/assets/img/viz_distributions/histogram.png" alt="jekyll Image"></p>
+
+<p>The first visualization I usually make for distributions is a histogram. You can see here that this is a terrible and uninformative way to look at the data. The differences in the sample sizes between the different groups makes them incomparable using this method. It is so extreme that you can no longer see the blue distribution. This visualization also fails at comparing or even seeing the outliers. The only thing I can conclude from this visual is that the red and green distributions have roughly the same mean.</p>
+
+<p><img src="http://localhost:4000/assets/img/viz_distributions/strip_plot.png" alt="jekyll Image"></p>
+
+<p>Although I think that box plots were the best option in this case, they can seem very formal and people often don’t know how to interpret them properly (Interquartile ranges, distributions, say what?). Additionally, box plots give no insight into the sample size used to create them. A strip plot can be more intuitive for a less statistically minded audience because they can see all the data points. This plot also gives an insight into the sample size of the distribution. I like to apply jitter and opacity to the points to make these plots more appealing.</p>
+
+<p><img src="http://localhost:4000/assets/img/viz_distributions/histogram_lots.png" alt="jekyll Image"></p>
+
+<p>Let’s jump into our second case, where we are interested in comparing the spreads of the distributions. Here, histograms are a good option if the distributions being compared have the same sample size and you are making at most 3 comparisons. Otherwise you will end up with a really busy plot that makes it very hard to see the data.</p>
+
+<p><img src="http://localhost:4000/assets/img/viz_distributions/denisty.png" alt="jekyll Image"></p>
+
+<p>I gravitate towards kernel density plots with no fill for these cases. It isn’t that pretty but you can actually see and compare the distributions. To overcome this in a recent project, I decided to implement a spin on the histogram and use a variation called the step plot that worked out great. I would suggest changing the way that you are representing your data if your plots are getting unwieldily.</p>
+
+<p>But what if you want it all?! In this case I like to use a violin plot. I have seen these plots becoming more popular and there are many variations that make them even more powerful. They are essentially boxplots that have a rotated kernel density plot around them. Here I plotted the boxplots inside the rotated kernel density plot.</p>
+
+<p><img src="http://localhost:4000/assets/img/viz_distributions/violin.png" alt="jekyll Image"></p>
+
+<p>That is all I have for you for now. I made all the plots above using the ggplot2 package in R. I also make quite a few plots in python using matplotlib and sometimes seaborne. The dataset used in case 2 was done using the airquality dataset shipped with R and the other dataset was built by myself for my masters thesis.</p>
+
+          </div>
+        </div>
+        <script src="http://localhost:4000/assets/js/jquery-1.12.2.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.goup({
+        trigger: 500,
+        bottomOffset: 10,
+        locationOffset: 20,
+        containerRadius: 0,
+        containerColor: '#fff',
+        arrowColor: '#000',
+        goupSpeed: 'normal'
+    });
+});
+</script>
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>

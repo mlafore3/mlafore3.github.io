@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Problem with p-values – Marc Laforet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="blogpost">
+    <link rel="canonical" href="http://localhost:4000/The-problem-with-p-values/">
+        <!-- Twitter Cards -->
+    <meta name="twitter:title" content="The Problem with p-values">
+    <meta name="twitter:description" content="">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/robot.png">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Problem with p-values">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://localhost:4000/The-problem-with-p-values/">
+    <meta property="og:site_name" content="Marc Laforet">
+    <meta property="og:image" content="http://localhost:4000/assets/img/robot.png">
+
+    
+    
+    <!-- Handheld -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    
+<link rel="shortcut icon" href="http://localhost:4000/assets/img/favicon/favicon.ico">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Marc Laforet" href="http://localhost:4000/feed.xml">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css">
+    <!-- Sweet Scroll -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/sweet-scroll.min.js"></script>
+    <!-- Particle System -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/particles.min.js"></script>
+</head>
+
+  <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        i = 0;
+        $('.menuAc').css({
+          'color': 'rgba(52, 152, 219, 1)'
+        });
+        $('.menuAc').click(function(){
+          $(this).next('.menuMobil').animate({width:'toggle'},350);
+          if (i%2==0) {
+            $('.footer').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('ul.menu').css({
+              'animation-duration': '0.1s'
+            });
+            i++;
+          }
+          else {
+            $('.footer').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(0px)'
+            });
+            i++;
+          }
+
+        });
+      });
+/* sweetScroll load */
+      document.addEventListener("DOMContentLoaded", function () {
+        const sweetScroll = new SweetScroll({/* some options */});
+
+        /* particlesJS.load(<a href="https://github.com/dom-id" class="user-mention">@dom-id</a>, <a href="https://github.com/path-json" class="user-mention">@path-json</a>, <a href="https://github.com/callback" class="user-mention">@callback</a> (optional)); */
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 100,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "polygon",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100,
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 19.18081918081918,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            },
+            nb: 80
+          },
+          "interactivity": {
+            "detect_on": "window",
+            "events": {
+              "onhover": {
+                "enable": false,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+
+      }, false);
+    </script>
+    <div id="particles-js" style="height: 700%; position: absolute; width: 100vw;"></div>
+    <div class="menuAc">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="menuMobil">
+          <nav class="nav-home">
+      <ul class="menu">
+            
+				    
+				    
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="#about" data-scroll>About</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Portfolio</a></li>
+				    
+				
+        </ul>
+    </nav>
+
+    </div>
+    <div class="ust">
+      <div class="ortalaAna">
+        <div class="baslikAna">
+          Marc Laforet
+        </div>
+
+        <div class="pc">
+              <nav class="nav">
+        <ul class="menuAna">
+            
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/">Home</a></li>
+				    
+			
+				    
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Portfolio</a></li>
+				    
+			
+        </ul>
+    </nav>
+
+        </div>
+      </div>
+    </div>
+    <div class="ortalaAna">
+      <div class="yazilar">
+        <div class="yazi">
+          <div class="ustr">
+            <h2>The Problem with p-values</h2>
+            <div class="yazibilgisi">
+              15 Jan 2018 Marc Laforet
+            </div>
+          </div>
+          <hr>
+          <div class="content">
+            <p>Like most people, I used to consider statistics a plague that I should try to avoid. However, my time as a medical researcher transformed my opinion because I realized how paramount accurate statistics were in making robust and reproducible conclusions. Luckily, I had come into contact with a professor that transformed my take on the p-value. He did this by showing me just how misleading it can be, which I hope to share with you.</p>
+
+<p>Let’s consider the student’s t-test, which is a procedure that determines if two groups of data are different. For example, perhaps a company wants to know if their product is bought more by men or women, a doctor wants to know if their patients taking a treatment has improved their symptoms, or a group of friends are planning their next vacation and want to know if hotels cost more in New York City or San Fransisco.</p>
+
+<p>Let’s consider our last example. Our hypothesis is that there is a relationship between hotel price and the city we visit. Our null hypothesis is that there is no relationship between the price of the hotel and the city that it is in. Assuming that this data would follow a normal distribution, let’s simulate some data. We’ll pretend that four best friends compiled the price per night of 100 hotels in San Fransisco and found that the average price was $100 with variation of +/- $25 (n=100, u=100, sd=25).</p>
+
+<p><img src="http://localhost:4000/assets/img/p-values/random_samples.jpeg" alt="jekyll Image"></p>
+
+<p>These four friends plotted the resulting distributions in a histogram with a density plot overlaid. Note that each friend has observed a different distribution of hotel prices, determined by which hotels they looked at. Perhaps friend 2 has more expensive taste whereas friend 4 is more thrifty. Nevertheless, it is important to consider what this means for p-values when we compare two distributions?</p>
+
+<p>Let’s say that these four best friends repeated this for hotels in New York City and tried to determine which city had more expensive hotels by completing a t-test. One of two things can happen. Case 1: The prices of the hotels in the two cities are different or Case 2: there is no difference.</p>
+
+<p>For Case 1, let’s say that the friends collected data from 100 NYC hotels and found that they cost on average $80 a night with standard deviation of $25. Completing the students t-test and calculating the p-value, the friends compare their findings.</p>
+
+<p><img src="http://localhost:4000/assets/img/p-values/hotel_diff.jpeg" alt="jekyll Image"></p>
+
+<p>Given their extremely small p-values, all four friends conclude that hotels in NYC are cheaper than San Fransisco. Importantly, all four friends got different p-values depending on the data that they collected. Let’s say that these friends are really popular and have 500 additional friends that are planning to join them on the trip.</p>
+
+<p><img src="http://localhost:4000/assets/img/p-values/diff_pvalues.jpeg" alt="jekyll Image"></p>
+
+<p>If they all completed this analysis and recorded their p-values, we could expect a distribution of p-values seen on the left. Although we mostly get a p-value below our 0.05 threshold, there are times where a friend gets a p-value that is above 0.05. In these instances, that friend would have concluded that there was no difference between hotel prices, even though there is. ALARMING!</p>
+
+<p>Even more alarming, let’s consider Case 2, where the data suggests that there is no difference between hotel prices in NYC and San Fran.</p>
+
+<p>Here, three out of the four friends would have concluded that there is no difference between hotel prices. However, friend number four received a p-value that is below 0.05 and would have thought that there is a difference, even though there isn’t. Who knows? Maybe this would have caused a huge fight and they wouldn’t be friends anymore…that’s just sad.</p>
+
+<p><img src="http://localhost:4000/assets/img/p-values/hotel_same.jpeg" alt="jekyll Image"></p>
+
+<p>Before the three friends unfriend the fourth friend, they decide to consult with their 500 additional friends to compare their p-values.</p>
+
+<p><img src="http://localhost:4000/assets/img/p-values/same_pvalues.jpeg" alt="jekyll Image"></p>
+
+<p>They are shocked to discover that when there is no difference between the prices of hotels, the p-value is effectively random! Although most of the friends would have reached the same conclusion, there is a group that would have concluded that there is a difference… even though there wasn’t one.</p>
+
+<p>Recall that the correct interpretation of a p-value is: 
+	Assuming that your null is true, a p-value quantifies the probability of seeing a data point at or beyond your current observation.</p>
+
+<p>Basically, you calculate a 95% confidence interval of where you expect your data to be. If you observe a value that is outside these bounds, it is unexpected as it is within the most extreme 5% of your data and supports your null hypothesis. If you want to be more lenient to variation, you might calculate a 97.5% confidence interval and only allow observations with p-values of 0.025 to disapprove your hypothesis. The best way to combat the fickle p-value is to increase the number of replicates that you do and see if your p-value jumps around or if it stays consistently low. Here I have coded an interactive visualization that will allow you to change the parameters of the two distributions and see the resulting p-value distribution. If you want to read more, I would recommend this paper. Code to regenerate this can be found in this repository.</p>
+
+          </div>
+        </div>
+        <script src="http://localhost:4000/assets/js/jquery-1.12.2.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.goup({
+        trigger: 500,
+        bottomOffset: 10,
+        locationOffset: 20,
+        containerRadius: 0,
+        containerColor: '#fff',
+        arrowColor: '#000',
+        goupSpeed: 'normal'
+    });
+});
+</script>
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>
