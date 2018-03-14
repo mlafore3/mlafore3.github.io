@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Problem with p-values"
+title:  "The problem with p-values"
 date:   2018-01-15
 excerpt: ""
 tag:

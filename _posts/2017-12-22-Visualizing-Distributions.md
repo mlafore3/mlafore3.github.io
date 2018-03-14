@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visualizing Distributions"
+title: "Visualizing distributions"
 date: 2017-12-22
 excerpt: ""
 tags: [blogpost]
