@@ -5,12 +5,12 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Visualizing distributions – Marc Laforet</title>
+    <title>Contributing to open source software - pandas – Marc Laforet</title>
     <meta name="description" content="">
     <meta name="keywords" content="blogpost">
-    <link rel="canonical" href="http://localhost:4000/Visualizing-Distributions/">
+    <link rel="canonical" href="http://localhost:4000/Contributing-to-open-source-project-pandas/">
         <!-- Twitter Cards -->
-    <meta name="twitter:title" content="Visualizing distributions">
+    <meta name="twitter:title" content="Contributing to open source software - pandas">
     <meta name="twitter:description" content="">
     
     <meta name="twitter:card" content="summary">
@@ -18,9 +18,9 @@
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Visualizing distributions">
+    <meta property="og:title" content="Contributing to open source software - pandas">
     <meta property="og:description" content="">
-    <meta property="og:url" content="http://localhost:4000/Visualizing-Distributions/">
+    <meta property="og:url" content="http://localhost:4000/Contributing-to-open-source-project-pandas/">
     <meta property="og:site_name" content="Marc Laforet">
     <meta property="og:image" content="http://localhost:4000/assets/img/marc_emoji.png">
 
@@ -282,46 +282,81 @@
       <div class="yazilar">
         <div class="yazi">
           <div class="ustr">
-            <h2>Visualizing distributions</h2>
+            <h2>Contributing to open source software - pandas</h2>
             <div class="yazibilgisi">
-              22 Dec 2017 Marc Laforet
+              13 Mar 2018 Marc Laforet
             </div>
           </div>
           <hr>
           <div class="content">
-            <p>You have munged all the necessary data into a clean format, you’ve appropriately performed a snazzy statistical analysis and now it’s time to analyze the results. This is where visualizing your data comes in handy. Informative data visualizations not only reveal novel insights, maybe you were dating someone and didn’t even know it, but they are truly invaluable when it comes time to communicate your findings to your boss/client.</p>
+            <p>Open-source software brings together many altruistic programmers that freely distribute their code to the world. As a programmer that leverages open-source software to make a living I have always wanted to make a contribution back to the open source community. This past weekend I achieved this goal during the global pandas documentation sprint.</p>
 
-<p>This post will specifically look into a visualization task that I’ve faced time and time again. Over the years of analyzing data, I often find myself wanting to compare and contrast multiple distributions of numeric data. This can be tricky depending on how different the distributions are, compounded by the vast number of possible representation methods for distributions (http://www.darkhorseanalytics.com/blog/visualizing-distributions-3). I commonly have one of two objectives when comparing distributions, either I want to highlight differences in their outliers or, often subtle, differences in their respective spreads. Maybe I want to show how datasets gathered with distinct criteria responded differently to a statistical procedure or how applying a statistical correction improved a scoring function.</p>
+<p>I know that I didn’t have to wait for this global event to make an open source contribution. In fact, I frequently creep the issue boards of open-source software that I frequently use. However, this being my first time contributing to an open-source project, it really helped having the support from the community along with detailed instructions. I was also given a very specific task, which also helped.</p>
 
-<p><img src="http://localhost:4000/assets/img/viz_distributions/boxplot.png" alt="jekyll Image"></p>
+<p>The pydata TO group hosted an event at the hacklab space in Toronto. The organizer assigned me the pandas.DataFrame.all documentation but before I got started I had to setup my environment. The pandas webpage has excellent instructions for doing this found <a href="http://pandas.pydata.org/pandas-docs/stable/contributing.html#creating-a-python-environment-pip">here.</a></p>
 
-<p>I tend to favour box plots if I’m interested in comparing outliers. Box plots show the overall spread of the data while plotting a data point for outliers. This physical point allows their specific values to be easily identified and compared among samples.</p>
+<p>I prefer to manage my virtual environments with venv and although there were a lot of warnings, everything worked pretty well. I could now start writing the documentation, which started as the following:</p>
 
-<p>Let’s ignore what the data actually means as that’s not important. You can see that the spread of the distributions are more or less equal and that the outliers are easily compared. The distribution coloured red/magenta has the most extreme outlier followed by the point that I coloured red from the green distribution. For this analysis, the red distribution had been previously calculated and I was able to reproduce their data by observing the extreme outlier. The red point however, was a novel observation.</p>
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_one.png" alt="jekyll Image"></p>
 
-<p>If you’re a person that pays attention to the plot axis and understand a little stats, then you might have realized that I applied a statistical transformation to my dataset in order to amplify the differences in the distribution outliers. I transformed my numerical distribution to a z-score. A z-score transforms the data points by measuring the number of standard deviations away they are from the sample mean.</p>
+<p>I ran the following line of code to produce the doc string output.</p>
 
-<p><img src="http://localhost:4000/assets/img/viz_distributions/histogram.png" alt="jekyll Image"></p>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">python</span> <span class="o">../</span><span class="n">scripts</span><span class="o">/</span><span class="n">validate_docstrings</span><span class="o">.</span><span class="n">py</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="nb">all</span></code></pre></figure>
 
-<p>The first visualization I usually make for distributions is a histogram. You can see here that this is a terrible and uninformative way to look at the data. The differences in the sample sizes between the different groups makes them incomparable using this method. It is so extreme that you can no longer see the blue distribution. This visualization also fails at comparing or even seeing the outliers. The only thing I can conclude from this visual is that the red and green distributions have roughly the same mean.</p>
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_two.png" alt="jekyll Image"></p>
 
-<p><img src="http://localhost:4000/assets/img/viz_distributions/strip_plot.png" alt="jekyll Image"></p>
+<p>Underneath the first set of hash-tags is what the doc-string currently looks like and underneath the second set is the current error list. The first error is:</p>
 
-<p>Although I think that box plots were the best option in this case, they can seem very formal and people often don’t know how to interpret them properly (Interquartile ranges, distributions, say what?). Additionally, box plots give no insight into the sample size used to create them. A strip plot can be more intuitive for a less statistically minded audience because they can see all the data points. This plot also gives an insight into the sample size of the distribution. I like to apply jitter and opacity to the points to make these plots more appealing.</p>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Docstring</span> <span class="n">text</span> <span class="p">(</span><span class="n">summary</span><span class="p">)</span> <span class="n">should</span> <span class="n">start</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">line</span> <span class="n">immediately</span> <span class="n">after</span> <span class="n">the</span> <span class="n">opening</span> <span class="n">quotes</span> <span class="p">(</span><span class="ow">not</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">line</span><span class="p">,</span> <span class="ow">or</span> <span class="n">leaving</span> <span class="n">a</span> <span class="n">blank</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">between</span><span class="p">)</span>
+<span class="n">Use</span> <span class="n">only</span> <span class="n">one</span> <span class="n">blank</span> <span class="n">line</span> <span class="n">to</span> <span class="n">separate</span> <span class="n">sections</span> <span class="ow">or</span> <span class="n">paragraphs</span></code></pre></figure>
 
-<p><img src="http://localhost:4000/assets/img/viz_distributions/histogram_lots.png" alt="jekyll Image"></p>
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_three.png" alt="jekyll Image"></p>
 
-<p>Let’s jump into our second case, where we are interested in comparing the spreads of the distributions. Here, histograms are a good option if the distributions being compared have the same sample size and you are making at most 3 comparisons. Otherwise you will end up with a really busy plot that makes it very hard to see the data.</p>
+<p>I was given a line associated with this doc-string and was confronted with confusion when I read the code.</p>
 
-<p><img src="http://localhost:4000/assets/img/viz_distributions/denisty.png" alt="jekyll Image"></p>
+<p>I was expecting something a little closer to what the actual docs looked like. After some investigation I realized that I was missing the magic within the decorators. The appender decorator appends the content found in the _bool_doc variable. The _bool_doc variable itself has references to variables that are interpolated from the arguments given in the substitution decorator.</p>
 
-<p>I gravitate towards kernel density plots with no fill for these cases. It isn’t that pretty but you can actually see and compare the distributions. To overcome this in a recent project, I decided to implement a spin on the histogram and use a variation called the step plot that worked out great. I would suggest changing the way that you are representing your data if your plots are getting unwieldily.</p>
+<p>When I tracked down the _bool_doc variable, I found the source of the first error starring at me.</p>
 
-<p>But what if you want it all?! In this case I like to use a violin plot. I have seen these plots becoming more popular and there are many variations that make them even more powerful. They are essentially boxplots that have a rotated kernel density plot around them. Here I plotted the boxplots inside the rotated kernel density plot.</p>
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_four.png" alt="jekyll Image"></p>
 
-<p><img src="http://localhost:4000/assets/img/viz_distributions/violin.png" alt="jekyll Image"></p>
+<p>The %(desc)s variable placeholder has a blank line after the open quotes. This is not allowed. So I removed this blank line and voila! I had debugged my first error.</p>
 
-<p>That is all I have for you for now. I made all the plots above using the ggplot2 package in R. I also make quite a few plots in python using matplotlib and sometimes seaborne. The dataset used in case 2 was done using the airquality dataset shipped with R and the other dataset was built by myself for my masters thesis.</p>
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_five.png" alt="jekyll Image"></p>
+
+<p>I kept working away at these errors and was then presented with a challenge. I was completing the documentation for DataFrame.all but it actually shares documentation with the DataFrame.any method. So when I needed to put in a see also and examples section, I had to add arguments to the instantiation function of these docs. This would allow these two related methods share the template for their documentation but have differences where needed.</p>
+
+<p>I added the examples and see_also arguments to the _make_logical_function and passed them in as variables.</p>
+
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_six.png" alt="jekyll Image"></p>
+
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_seven.png" alt="jekyll Image"></p>
+
+<p>Below is an example of a variable that was passed to the argument that generated the docs.Notice how I added the _all_doc, _all_examples and _all_see_also variables tot he cls.all object.</p>
+
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_eight.png" alt="jekyll Image"></p>
+
+<p>These changes resulted in the new documentation page looking like the following</p>
+
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">single</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="nb">all</span></code></pre></figure>
+
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_nine.png" alt="jekyll Image"></p>
+
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_ten.png" alt="jekyll Image"></p>
+
+<p>An improvement for sure.</p>
+
+<p>The next step was to get this branch ready to be merged. Including making sure that it compiled and passed the pep8 standards.</p>
+
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">git</span> <span class="n">diff</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="o">-</span><span class="n">u</span> <span class="o">--</span> <span class="s">"*.py"</span> <span class="o">|</span> <span class="n">flake8</span> <span class="o">--</span><span class="n">diff</span></code></pre></figure>
+
+<p>I submitted a pull request and had comments within minutes. The comments ranged from stylistic changes to a request to add information about the all method being applicable to series data structures. Three separate core pandas developers commented on the branch. Although I frequently undergo this process at work it was really cool to do this with people that I’ve never met before across the world.</p>
+
+<p>Finally at 10:42am on March 11th my branch was merged and I officially became a contributor to the pandas project in the 0.23.0 release. Merge can be found <a href="https://github.com/pandas-dev/pandas/pull/20216">here.</a></p>
+
+<p><img src="http://localhost:4000/assets/img/pandas_contrib/pandas_eleven.png" alt="jekyll Image"></p>
+
+<p>I hope to make more contributions to open-source software and will hopefully contribute to implementation details as well as more documentation.</p>
 
           </div>
         </div>

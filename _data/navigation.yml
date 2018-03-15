@@ -9,5 +9,8 @@
 - title: Blog
   url: /blog/
   
-- title: Portfolio
+- title: Projects
   url: /projects/
+
+- title: Code Snippets
+  url: /snippets/

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom queue error handling – Marc Laforet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="snippet">
+    <link rel="canonical" href="http://localhost:4000/Custom-queue-error-handling/">
+        <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Custom queue error handling">
+    <meta name="twitter:description" content="">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/marc_emoji.png">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Custom queue error handling">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://localhost:4000/Custom-queue-error-handling/">
+    <meta property="og:site_name" content="Marc Laforet">
+    <meta property="og:image" content="http://localhost:4000/assets/img/marc_emoji.png">
+
+    
+    
+    <!-- Handheld -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    
+<link rel="shortcut icon" href="http://localhost:4000/assets/img/favicon/favicon.ico">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Marc Laforet" href="http://localhost:4000/feed.xml">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css">
+    <!-- Sweet Scroll -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/sweet-scroll.min.js"></script>
+    <!-- Particle System -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/particles.min.js"></script>
+</head>
+
+  <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        i = 0;
+        $('.menuAc').css({
+          'color': 'rgba(52, 152, 219, 1)'
+        });
+        $('.menuAc').click(function(){
+          $(this).next('.menuMobil').animate({width:'toggle'},350);
+          if (i%2==0) {
+            $('.footer').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('ul.menu').css({
+              'animation-duration': '0.1s'
+            });
+            i++;
+          }
+          else {
+            $('.footer').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(0px)'
+            });
+            i++;
+          }
+
+        });
+      });
+/* sweetScroll load */
+      document.addEventListener("DOMContentLoaded", function () {
+        const sweetScroll = new SweetScroll({/* some options */});
+
+        /* particlesJS.load(<a href="https://github.com/dom-id" class="user-mention">@dom-id</a>, <a href="https://github.com/path-json" class="user-mention">@path-json</a>, <a href="https://github.com/callback" class="user-mention">@callback</a> (optional)); */
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 100,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "polygon",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100,
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 19.18081918081918,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            },
+            nb: 80
+          },
+          "interactivity": {
+            "detect_on": "window",
+            "events": {
+              "onhover": {
+                "enable": false,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+
+      }, false);
+    </script>
+    <div id="particles-js" style="height: 700%; position: absolute; width: 100vw;"></div>
+    <div class="menuAc">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="menuMobil">
+          <nav class="nav-home">
+      <ul class="menu">
+            
+				    
+				    
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="#about" data-scroll>About</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Projects</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/snippets/">Code Snippets</a></li>
+				    
+				
+        </ul>
+    </nav>
+
+    </div>
+    <div class="ust">
+      <div class="ortalaAna">
+        <div class="baslikAna">
+          Marc Laforet
+        </div>
+
+        <div class="pc">
+              <nav class="nav">
+        <ul class="menuAna">
+            
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/">Home</a></li>
+				    
+			
+				    
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Projects</a></li>
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/snippets/">Code Snippets</a></li>
+				    
+			
+        </ul>
+    </nav>
+
+        </div>
+      </div>
+    </div>
+    <div class="ortalaAna">
+      <div class="yazilar">
+        <div class="yazi">
+          <div class="ustr">
+            <h2>Custom queue error handling</h2>
+            <div class="yazibilgisi">
+              14 Mar 2018 Marc Laforet
+            </div>
+          </div>
+          <hr>
+          <div class="content">
+            <p>One thing we can all agree on is that we strive our apps to be quick and snappy. We all get frustrated by even the slightest signs of lagging. This is where background processing becomes really important in application development. Completeing tasks asyncronously is even more important in data-driven applications where background processes can take minutes or even days. Being a django app developer I prefer to use django-rq to manage these background tasks. It is very easy to get rq up and running within a couple of hours.</p>
+
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="c"># In your config file add the following code</span>
+
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c"># other apps</span>
+    <span class="s">"django_rq"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">RQ_QUEUES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'default'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'HOST'</span><span class="p">:</span> <span class="s">'localhost'</span><span class="p">,</span>
+        <span class="s">'PORT'</span><span class="p">:</span> <span class="mi">6379</span><span class="p">,</span>
+        <span class="s">'DB'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">'PASSWORD'</span><span class="p">:</span> <span class="s">'some-password'</span><span class="p">,</span>
+        <span class="s">'DEFAULT_TIMEOUT'</span><span class="p">:</span> <span class="mi">360</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">'high'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'URL'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'REDISTOGO_URL'</span><span class="p">,</span> <span class="s">'redis://localhost:6379/0'</span><span class="p">),</span> <span class="c"># If you're on Heroku</span>
+        <span class="s">'DEFAULT_TIMEOUT'</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">'low'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'HOST'</span><span class="p">:</span> <span class="s">'localhost'</span><span class="p">,</span>
+        <span class="s">'PORT'</span><span class="p">:</span> <span class="mi">6379</span><span class="p">,</span>
+        <span class="s">'DB'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c"># In a separate file where you keep view helper functions place </span>
+
+<span class="kn">import</span> <span class="nn">django_rq</span>
+
+<span class="k">def</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">queue</span> <span class="o">=</span> <span class="n">django_rq</span><span class="o">.</span><span class="n">get_queue</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'queue'</span><span class="p">,</span> <span class="s">'default'</span><span class="p">))</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">job</span>
+
+<span class="c"># Now use the enqueue function in your app whereever you want to complete a background task.</span>
+<span class="n">enqueue</span><span class="p">(</span><span class="n">start_job</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">86400</span><span class="p">)</span>
+
+<span class="c"># You must make sure that you have a redis server running as well as a rq worker. </span></code></pre></figure>
+
+<p>None of this is groundbreaking but I ran into something a little more interesting the other day. I had to add a custom handler to failed jobs. This handler needs to respond to a specific error type (timeout) and update a model accordingly.</p>
+
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="c">#The config file gets these two handlers. It will pass through these handlers consecttively.</span>
+
+<span class="n">RQ_EXCEPTION_HANDLERS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">'probex.task_queue.timeout_handler'</span><span class="p">,</span> <span class="c"># errors will pass through this handler first</span>
+    <span class="s">'probex.task_queue.move_to_failed_queue'</span> <span class="c"># catch all error handler</span>
+<span class="p">]</span>
+
+<span class="c">#Update the view helper file to </span>
+
+<span class="kn">import</span> <span class="nn">django_rq</span>
+<span class="kn">from</span> <span class="nn">rq.timeouts</span> <span class="kn">import</span> <span class="n">JobTimeoutException</span>
+<span class="kn">from</span> <span class="nn">app.models</span> <span class="kn">import</span> <span class="n">Model</span>
+
+<span class="c"># custom error handler</span>
+<span class="k">def</span> <span class="nf">timeout_handler</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span> <span class="c"># the arguments that get passed to the handler</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exc_value</span><span class="p">,</span> <span class="n">JobTimeoutException</span><span class="p">):</span> <span class="c"># check that the exception value is JobTimeoutException</span>
+        <span class="k">if</span> <span class="s">'app.background_process.do_long_computation'</span> <span class="o">==</span> <span class="n">job</span><span class="o">.</span><span class="n">func_name</span><span class="p">:</span> <span class="c"># check that the queued function is the one I care about</span>
+            <span class="n">job</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="n">job</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c"># get the model instance that represents the value of the computation</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s">'Error: This process timed out.'</span> <span class="c"># update the job status</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">save</span><span class="p">()</span> <span class="c"># save the status</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+<span class="c"># catch all handler to move to failed queue</span>
+<span class="k">def</span> <span class="nf">move_to_failed_queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="o">*</span><span class="n">exc_info</span><span class="p">):</span> 
+    <span class="n">worker</span> <span class="o">=</span> <span class="n">django_rq</span><span class="o">.</span><span class="n">get_worker</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">origin</span><span class="p">)</span>
+    <span class="n">worker</span><span class="o">.</span><span class="n">move_to_failed_queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="o">*</span><span class="n">exc_info</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">enqueue</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">queue</span> <span class="o">=</span> <span class="n">django_rq</span><span class="o">.</span><span class="n">get_queue</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'queue'</span><span class="p">,</span> <span class="s">'default'</span><span class="p">))</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">job</span></code></pre></figure>
+
+<p>Now just use the enqueue function as normal and it will hit the custom error handler.</p>
+
+          </div>
+        </div>
+        <script src="http://localhost:4000/assets/js/jquery-1.12.2.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.goup({
+        trigger: 500,
+        bottomOffset: 10,
+        locationOffset: 20,
+        containerRadius: 0,
+        containerColor: '#fff',
+        arrowColor: '#000',
+        goupSpeed: 'normal'
+    });
+});
+</script>
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>

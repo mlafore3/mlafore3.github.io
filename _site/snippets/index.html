@@ -5,22 +5,22 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Marc Laforet</title>
-    <meta name="description" content="Empowering your business to make data-driven decisions">
+    <title>All Code Snippets – Marc Laforet</title>
+    <meta name="description" content="A List of Code Snippets">
     <meta name="keywords" content="">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/snippets/">
         <!-- Twitter Cards -->
-    <meta name="twitter:title" content="Home">
-    
+    <meta name="twitter:title" content="All Code Snippets">
+    <meta name="twitter:description" content="A List of Code Snippets">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="http://localhost:4000/assets/img/marc_emoji.png">
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Home">
-    
-    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:title" content="All Code Snippets">
+    <meta property="og:description" content="A List of Code Snippets">
+    <meta property="og:url" content="http://localhost:4000/snippets/">
     <meta property="og:site_name" content="Marc Laforet">
     <meta property="og:image" content="http://localhost:4000/assets/img/marc_emoji.png">
 
@@ -46,50 +46,45 @@
 
   <body>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script type="text/javascript">
       $(function() {
         i = 0;
+        $('.menuAc').css({
+          'color': 'rgba(52, 152, 219, 1)'
+        });
         $('.menuAc').click(function(){
-
           $(this).next('.menuMobil').animate({width:'toggle'},350);
           if (i%2==0) {
-            $('.baslik').css({
+            $('.footer').css({
               'filter'         : 'blur(5px)'
             });
-            $('.orta').css({
+            $('.yazilar').css({
               'filter'         : 'blur(5px)'
             });
-            $('.social-links').css({
+            $('.ust').css({
               'filter'         : 'blur(5px)'
             });
             $('ul.menu').css({
               'animation-duration': '0.1s'
             });
-            $(this).css({
-              'color': 'rgba(52, 152, 219, 1)'
-            });
             i++;
           }
           else {
-            $('.baslik').css({
-               'filter'         : 'blur(0px)'
+            $('.footer').css({
+              'filter'         : 'blur(0px)'
             });
-            $('.orta').css({
-               'filter'         : 'blur(0px)'
+            $('.yazilar').css({
+              'filter'         : 'blur(0px)'
             });
-            $('.social-links').css({
-               'filter'         : 'blur(0px)'
-            });
-            $(this).css({
-              'color': '#ecf0f1'
+            $('.ust').css({
+              'filter'         : 'blur(0px)'
             });
             i++;
           }
 
         });
       });
-      /* sweetScroll load */
+/* sweetScroll load */
       document.addEventListener("DOMContentLoaded", function () {
         const sweetScroll = new SweetScroll({/* some options */});
 
@@ -208,7 +203,7 @@
 
       }, false);
     </script>
-    <div id="particles-js" style="height: 100vh;"></div>
+    <div id="particles-js" style="height: 100vh; position: absolute; width: 100vw;"></div>
     <div class="menuAc">
       <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
@@ -244,158 +239,83 @@
     </nav>
 
     </div>
-    <div class="oliver">
-      <div class="baslik"> Marc Laforet </div>
-      <div class="tag-line"> Empowering your business to make data-driven decisions </div>
-      <div><img id="robot-home" src="assets/img/marc_emoji.png"></div>
-      <div class="header-icons">
-        <a aria-label="My Medium" target="_blank" style="color: #fff; opacity: 0.8;" href="https://towardsdatascience.com/@mlafore05"><i class="fab fa-medium"></i></a>
-        <a aria-label="Send email" target="_blank" style="color: #fff; opacity: 0.8;" href="mailto:mlafore05@gmail.com"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="My Github" target="_blank" style="color: #fff; opacity: 0.8;" href="https://github.com/mlafore3"><i class="fab fa-github-alt" aria-hidden="true"></i></a>
-        <a aria-label="My LinkedIn" target="_blank" style="color: #fff; opacity: 0.8;" href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-      </div>
-      <div class="aciklamalar" id="toolbar">    <nav class="nav-home">
-      <ul class="menu">
+    <div class="ust">
+      <div class="ortalaAna">
+        <div class="baslikAna">
+          Marc Laforet
+        </div>
+
+        <div class="pc">
+              <nav class="nav">
+        <ul class="menuAna">
             
 				    
 				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/">Home</a></li>
 				    
-				
+			
 				    
 				    
-				    	<li class="item"><a class="link" href="#about" data-scroll>About</a></li>
-				    
-				
+			
 				    
 				    
 				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
 				    
-				
+			
 				    
 				    
 				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Projects</a></li>
 				    
-				
+			
 				    
 				    
 				    	<li class="item"><a class="link" href="http://localhost:4000/snippets/">Code Snippets</a></li>
 				    
-				
+			
         </ul>
     </nav>
- </div>
-      <a class="down" href="#about" data-scroll>
-        <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
-      </a>
+
+        </div>
+      </div>
     </div>
-      <section id="about">
-        <div class="sub-baslik">My Expertise</div>
-<p class="sub-tag-line">Being passionatly curious has taken me from data science to full-stack web development</p>
-<div class="code">
-  <div class="tech">
-    <div class="conda">Code</div>
-    <i class="devicon-python-plain-wordmark"></i>
-    <i class="devicon-javascript-plain"></i>
-    <i class="devicon-postgresql-plain"></i>
-    <br>
-    <i class="devicon-css3-plain"></i>
-    <i class="devicon-html5-plain"></i>
-    <div class="sub-tag-line">R &amp; Unix</div>
-  </div>
-</div>
-<br>
-<br>
-<div class="code">
-  <div class="tech">
-    <div class="conda">Analytics</div>
-      <img style="width: 40vh; padding-top: 10px;" src="assets/img/py.png">
-      <img style="width: 15vh;" src="assets/img/keras.png">
-  </div>
-  <div class="tech">
-    <div class="conda">Frameworks</div>
-    <i class="devicon-git-plain"></i>
-    <i class="devicon-django-plain"></i>
-    <i class="devicon-redis-plain-wordmark"></i>
-    <br>
-    <img style="width: 25vh;" src="assets/img/gcp.png">
-    <i class="devicon-react-original-wordmark"></i>
-    <i class="devicon-d3js-plain"></i>
-    <i class="devicon-docker-plain-wordmark"></i>
-    <div class="sub-tag-line">Django-REST, Redux, Pytest, Mocha &amp; more!</div>
-  </div>
-</div>
-      </section>
-    <br>
-    <br>
-    <br>
-    <section id="projects">
-        <div class="sub-baslik">Featured Projects</div>
-
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="/assets/img/build_a_business.png">
-  </div>
-  <div class="contents">
-    <div style="font-family: Lobster, cursive; font-size: 20pt;">Build-a-Business</div>
-    <ul>
-      <li>Django-REST</li>
-      <li>PostgreSQL</li>
-      <li>React</li>
-      <li>Redux</li>
-    </ul>
-    <p>I created a template for a SaaS application. My go to stack for developing a new application completely decouples the frontend and backend. I prefer to use Django-REST for the backend while I let React and Redux take care of the frontend.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
-<div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="/assets/img/redis-queue.png">
-  </div>
-  <div class="contents-right">
-    <div style="font-family: Lobster, cursive; font-size: 20pt;">Background job processing</div>
-    <ul>
-      <li>Python</li>
-      <li>Custom error handling</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
-    </section>
-    <section id="projects">
-        <div class="sub-baslik">Code Snippets</div>
-
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="/assets/img/sherlock-holmes.png">
-  </div>
-  <div class="contents">
-    <div style="font-family: Lobster, cursive; font-size: 20pt;">Model finder</div>
-    <ul>
-      <li>Django-REST</li>
-      <li>PostgreSQL</li>
-      <li>React</li>
-      <li>Redux</li>
-    </ul>
-    <p>I created a template for a SaaS application. My go to stack for developing a new application completely decouples the frontend and backend. I prefer to use Django-REST for the backend while I let React and Redux take care of the frontend.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
-
-<div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="/assets/img/redis-queue.png">
-  </div>
-  <div class="contents-right">
-    <div style="font-family: Lobster, cursive; font-size: 20pt;">Background job processing</div>
-    <ul>
-      <li>Python</li>
-      <li>Custom error handling</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
-    </section>
+    <div class="ortalaAna">
+      <div class="yazilar">
+        
+          
+        
+          
+        
+          
+            <div class="yazi">
+              <div class="ustr">
+                <h2><a href="http://localhost:4000/Model-finder/">Model finder</a></h2>
+                <div class="yazibilgisi">
+                  14 Mar 2018 Marc Laforet
+                </div>
+              </div>
+            </div>
+          
+        
+          
+            <div class="yazi">
+              <div class="ustr">
+                <h2><a href="http://localhost:4000/Custom-queue-error-handling/">Custom queue error handling</a></h2>
+                <div class="yazibilgisi">
+                  14 Mar 2018 Marc Laforet
+                </div>
+              </div>
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </div>
   </body>
 </html>
