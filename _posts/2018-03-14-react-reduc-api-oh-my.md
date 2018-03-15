@@ -4,8 +4,7 @@ title:  "React, redux and API oh my!"
 date:   2018-03-14
 excerpt: ""
 tag:
-- none
-<!-- - snippet -->
+- inprogress
 ---
 
 {% highlight py %}
