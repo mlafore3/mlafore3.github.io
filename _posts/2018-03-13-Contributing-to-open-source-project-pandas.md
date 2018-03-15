@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Contributing to open source software - pandas"
+title:  "My experience contributing to open source software - pandas"
 date:   2018-03-13
 excerpt: ""
 tag:
