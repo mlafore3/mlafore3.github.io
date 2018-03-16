@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "Build-a-Business - a template SaaS application"
+title:  "Build-a-Business - a SaaS application template"
 date:   2018-03-13
 excerpt: ""
 tag:
