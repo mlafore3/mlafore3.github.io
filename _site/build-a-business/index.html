@@ -5,25 +5,10 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Build-a-Business - a template SaaS application – Marc Laforet</title>
+    <title>Build-a-Business - a SaaS application template – Marc Laforet</title>
     <meta name="description" content="">
     <meta name="keywords" content="project">
     <link rel="canonical" href="http://localhost:4000/build-a-business/">
-        <!-- Twitter Cards -->
-    <meta name="twitter:title" content="Build-a-Business - a template SaaS application">
-    <meta name="twitter:description" content="">
-    
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://localhost:4000/assets/img/marc_emoji.png">
-    <!-- Open Graph -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Build-a-Business - a template SaaS application">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="http://localhost:4000/build-a-business/">
-    <meta property="og:site_name" content="Marc Laforet">
-    <meta property="og:image" content="http://localhost:4000/assets/img/marc_emoji.png">
-
     
     
     <!-- Handheld -->
@@ -282,14 +267,14 @@
       <div class="yazilar">
         <div class="yazi">
           <div class="ustr">
-            <h2>Build-a-Business - a template SaaS application</h2>
+            <h2>Build-a-Business - a SaaS application template</h2>
             <div class="yazibilgisi">
               13 Mar 2018 Marc Laforet
             </div>
           </div>
           <hr>
           <div class="content">
-            <p>I am always thinking of new ideas for web applications, so is my brother so maybe it’s in our DNA. There is a problem however, just getting a project up and running takes a significant amount of time. A SaaS application has a lot of moving parts. At minimum, you need to setup a database, a backend API and a frontend. This problem came up time and time again so I decided to develop a base SaaS application project that I could use to jumpstart any of my ideas. The chosen stack is a postgresql database, django-rest backend API and a frontend powered by react and redux. I followed this <a href="hackernoon.com/creating-websites-using-react-and-django-rest-framework-b14c066087c7">blogpost</a> and for the most part I really liked it. This blogpost adds documentation on how to setup a basic postgresql database, heavily changes the frontend code architecture and I’ve made the working code readily available on github.</p>
+            <p>I am always thinking of new ideas for web applications, so is my brother so maybe it’s in our DNA. There is a problem however, just getting a project up and running takes a significant amount of time. A SaaS application has a lot of moving parts. At minimum, you need to setup a database, a backend API and a frontend. This problem came up time and time again so I decided to develop a base SaaS application project that I could use to jumpstart any of my ideas. The chosen stack is a postgresql database, django-rest backend API and a frontend powered by react and redux. I utilized djangos and reacts boiler plate project templates. The django one is pretty good but I heavily changed the react template. If you’re only intered in the code, the repository can be found on <a href="https://github.com/mlafore3/build-a-business">github</a>.</p>
 
 <p>Here are the steps that I followed to build the app architecture</p>
 
@@ -383,10 +368,10 @@ http://www.django-rest-framework.org/api-guide/authentication/#tokenauthenticati
     <span class="o">]</span>
     <span class="s1">'DEFAULT_PAGINATION_CLASS'</span>: <span class="s1">'rest_framework.pagination.PageNumberPagination'</span>,
     <span class="s1">'PAGE_SIZE'</span>: 50,
-    <span class="s1">'DEFAULT_AUTHENTICATION_CLASSES'</span>: <span class="o">(</span> <span class="s1">'rest_framework.authentication.BasicAuthentication'</span>,
-                                        <span class="s1">'rest_framework.authentication.SessionAuthentication'</span>,
-                                        <span class="s1">'rest_framework.authentication.TokenAuthentication'</span>,
-                                        <span class="o">)</span>,
+    <span class="s1">'DEFAULT_AUTHENTICATION_CLASSES'</span>: <span class="o">(</span> 
+    <span class="s1">'rest_framework.authentication.BasicAuthentication'</span>,
+    <span class="s1">'rest_framework.authentication.TokenAuthentication'</span>,
+    <span class="o">)</span>,
 <span class="o">}</span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh">Go into root of folder
@@ -399,38 +384,18 @@ http://www.django-rest-framework.org/api-guide/authentication/#tokenauthenticati
 <span class="gp">$ </span>npm install --save redux redux-logger redux-persist react-redux
 <span class="gp">$ </span>npm install --save axios react-router-dom lodash</code></pre></figure>
 
+<p>This is where I decided to change the base frontend architecture. To be continued.</p>
+
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>touch store.js
 <span class="gp">$ </span>mkdir reducers
 <span class="gp">$ </span>mkdir actions
-<span class="gp">$ </span>mkdir util
 <span class="gp">$ </span>touch reducers/index.js</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-sh" data-lang="sh"> npm start </code></pre></figure>
 <p>in frontend root</p>
 
-<p>This is where I decided to really rip apart the frontend. Although the node server ran, the moment I tried to change anything it started to break.</p>
-
           </div>
         </div>
-        <script src="http://localhost:4000/assets/js/jquery-1.12.2.min.js"></script>
-<script src="http://localhost:4000/assets/js/jquery.goup.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $.goup({
-        trigger: 500,
-        bottomOffset: 10,
-        locationOffset: 20,
-        containerRadius: 0,
-        containerColor: '#fff',
-        arrowColor: '#000',
-        goupSpeed: 'normal'
-    });
-});
-</script>
-
-
-        
-
       </div>
     </div>
   </body>

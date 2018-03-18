@@ -6,7 +6,7 @@ excerpt: ""
 tag:
 - project
 ---
-I am always thinking of new ideas for web applications, so is my brother so maybe it's in our DNA. There is a problem however, just getting a project up and running takes a significant amount of time. A SaaS application has a lot of moving parts. At minimum, you need to setup a database, a backend API and a frontend. This problem came up time and time again so I decided to develop a base SaaS application project that I could use to jumpstart any of my ideas. The chosen stack is a postgresql database, django-rest backend API and a frontend powered by react and redux. I followed this [blogpost](hackernoon.com/creating-websites-using-react-and-django-rest-framework-b14c066087c7) and for the most part I really liked it. This blogpost adds documentation on how to setup a basic postgresql database, heavily changes the frontend code architecture and I've made the working code readily available on [github](https://github.com/mlafore3/build-a-business).
+I am always thinking of new ideas for web applications, so is my brother so maybe it's in our DNA. There is a problem however, just getting a project up and running takes a significant amount of time. A SaaS application has a lot of moving parts. At minimum, you need to setup a database, a backend API and a frontend. This problem came up time and time again so I decided to develop a base SaaS application project that I could use to jumpstart any of my ideas. The chosen stack is a postgresql database, django-rest backend API and a frontend powered by react and redux. I utilized djangos and reacts boiler plate project templates. The django one is pretty good but I heavily changed the react template. If you're only intered in the code, the repository can be found on [github](https://github.com/mlafore3/build-a-business).
 
 Here are the steps that I followed to build the app architecture
 
@@ -115,10 +115,10 @@ REST_FRAMEWORK = {
     ]
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 50,
-    'DEFAULT_AUTHENTICATION_CLASSES': ( 'rest_framework.authentication.BasicAuthentication',
-                                        'rest_framework.authentication.SessionAuthentication',
-                                        'rest_framework.authentication.TokenAuthentication',
-                                        ),
+    'DEFAULT_AUTHENTICATION_CLASSES': ( 
+    'rest_framework.authentication.BasicAuthentication',
+    'rest_framework.authentication.TokenAuthentication',
+    ),
 }
 {% endhighlight %}
 
@@ -136,14 +136,13 @@ $ npm install --save redux redux-logger redux-persist react-redux
 $ npm install --save axios react-router-dom lodash
 {% endhighlight %}
 
+This is where I decided to change the base frontend architecture. To be continued. 
+
 {% highlight sh %}
 $ touch store.js
 $ mkdir reducers
 $ mkdir actions
-$ mkdir util
 $ touch reducers/index.js
 {% endhighlight %}
 
 {% highlight sh %} npm start {% endhighlight %} in frontend root
-
-This is where I decided to really rip apart the frontend. Although the node server ran, the moment I tried to change anything it started to break. 

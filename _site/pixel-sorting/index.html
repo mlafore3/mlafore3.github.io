@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pixel Sorter – Marc Laforet</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="project">
+    <link rel="canonical" href="http://localhost:4000/pixel-sorting/">
+    
+    
+    <!-- Handheld -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    
+<link rel="shortcut icon" href="http://localhost:4000/assets/img/favicon/favicon.ico">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Marc Laforet" href="http://localhost:4000/feed.xml">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css">
+    <!-- Sweet Scroll -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/sweet-scroll.min.js"></script>
+    <!-- Particle System -->
+    <script type="text/javascript" src="http://localhost:4000/assets/js/particles.min.js"></script>
+</head>
+
+  <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        i = 0;
+        $('.menuAc').css({
+          'color': 'rgba(52, 152, 219, 1)'
+        });
+        $('.menuAc').click(function(){
+          $(this).next('.menuMobil').animate({width:'toggle'},350);
+          if (i%2==0) {
+            $('.footer').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(5px)'
+            });
+            $('ul.menu').css({
+              'animation-duration': '0.1s'
+            });
+            i++;
+          }
+          else {
+            $('.footer').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.yazilar').css({
+              'filter'         : 'blur(0px)'
+            });
+            $('.ust').css({
+              'filter'         : 'blur(0px)'
+            });
+            i++;
+          }
+
+        });
+      });
+/* sweetScroll load */
+      document.addEventListener("DOMContentLoaded", function () {
+        const sweetScroll = new SweetScroll({/* some options */});
+
+        /* particlesJS.load(<a href="https://github.com/dom-id" class="user-mention">@dom-id</a>, <a href="https://github.com/path-json" class="user-mention">@path-json</a>, <a href="https://github.com/callback" class="user-mention">@callback</a> (optional)); */
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": 100,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "polygon",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100,
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 19.18081918081918,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 4,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            },
+            nb: 80
+          },
+          "interactivity": {
+            "detect_on": "window",
+            "events": {
+              "onhover": {
+                "enable": false,
+                "mode": "grab"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+
+      }, false);
+    </script>
+    <div id="particles-js" style="height: 700%; position: absolute; width: 100vw;"></div>
+    <div class="menuAc">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="menuMobil">
+          <nav class="nav-home">
+      <ul class="menu">
+            
+				    
+				    
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="#about" data-scroll>About</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Projects</a></li>
+				    
+				
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/snippets/">Code Snippets</a></li>
+				    
+				
+        </ul>
+    </nav>
+
+    </div>
+    <div class="ust">
+      <div class="ortalaAna">
+        <div class="baslikAna">
+          Marc Laforet
+        </div>
+
+        <div class="pc">
+              <nav class="nav">
+        <ul class="menuAna">
+            
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/">Home</a></li>
+				    
+			
+				    
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/blog/">Blog</a></li>
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/projects/">Projects</a></li>
+				    
+			
+				    
+				    
+				    	<li class="item"><a class="link" href="http://localhost:4000/snippets/">Code Snippets</a></li>
+				    
+			
+        </ul>
+    </nav>
+
+        </div>
+      </div>
+    </div>
+    <div class="ortalaAna">
+      <div class="yazilar">
+        <div class="yazi">
+          <div class="ustr">
+            <h2>Pixel Sorter</h2>
+            <div class="yazibilgisi">
+              13 Dec 2017 Marc Laforet
+            </div>
+          </div>
+          <hr>
+          <div class="content">
+            <p>I wrote a program that reads in all the pixels of a photo, sorts them by colour, and animates between these two states. The code can be found <a href="https://github.com/mlafore3/generative_design/blob/master/sortPixels/sort_pixels.js">here</a>.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// instantiate variables</span>
+<span class="kd">var</span> <span class="nx">ctx</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">pixelMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span> <span class="c1">// abiity to iteratively set key-value pairs</span>
+<span class="kd">var</span> <span class="nx">originalArray</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="kd">var</span> <span class="nx">currentState</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">// intiate pixel sorter after the image is loaded</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"DOMContentLoaded"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'image_canvas'</span><span class="p">);</span>
+  <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'image'</span><span class="p">);</span>
+  <span class="nx">width</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">src</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+  <span class="nx">height</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">src</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+
+  <span class="nx">formatData</span><span class="p">();</span>
+<span class="p">});</span>
+
+
+<span class="kd">function</span> <span class="nx">formatData</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span> <span class="c1">// set canvas rendering context</span>
+  <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">.</span><span class="nx">src</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+  <span class="kd">var</span> <span class="nx">imgData</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">pixels</span> <span class="o">=</span> <span class="nx">imgData</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+
+  <span class="nx">l</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">*</span> <span class="nx">height</span><span class="p">;</span> 
+
+  <span class="c1">// map pixel information to x,y coordinates and attach information</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">*</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">pixels</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">0</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">pixels</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">pixels</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">2</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">pixels</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">3</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">chroma</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">g</span><span class="p">,</span><span class="nx">b</span><span class="p">);</span>
+    <span class="c1">// map index of array to grid based on image size</span>
+    <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">i</span> <span class="o">/</span> <span class="nx">width</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">-</span> <span class="nx">y</span> <span class="o">*</span> <span class="nx">width</span><span class="p">;</span> <span class="c1">// y * width is min index value of row</span>
+    <span class="c1">// attach information to originalArray</span>
+    <span class="nx">originalArray</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+      <span class="na">color</span><span class="p">:</span> <span class="nx">color</span><span class="p">,</span>
+      <span class="na">y</span><span class="p">:</span> <span class="nx">y</span><span class="p">,</span>
+      <span class="na">x</span><span class="p">:</span> <span class="nx">x</span><span class="p">,</span>
+      <span class="na">d</span><span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="nx">chroma</span><span class="p">.</span><span class="nx">distance</span><span class="p">(</span><span class="s1">'#ffffff'</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'rgb'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.222</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'rgb'</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.707</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'rgb'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.071</span><span class="p">),</span> <span class="c1">// get the colour distance from white and divide by the pixels grayscale repr</span>
+      <span class="na">timeSpan</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+      <span class="na">frame</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// current frame number, used for interpolation</span>
+      <span class="na">destX</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// computeDestinations()</span>
+      <span class="na">destY</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+  <span class="c1">// compute destX and destY</span>
+  <span class="kd">var</span> <span class="nx">sortedArray</span> <span class="o">=</span> <span class="nx">originalArray</span><span class="p">.</span><span class="nx">concat</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">d</span> <span class="o">-</span> <span class="nx">a</span><span class="p">.</span><span class="nx">d</span>
+  <span class="p">});</span>
+  <span class="nx">sortedArray</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">pixelMap</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">','</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">y</span><span class="p">),</span> <span class="nx">index</span><span class="p">);});</span>
+  <span class="nx">originalArray</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">pixelMap</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">','</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">y</span><span class="p">))</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">destY</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">index</span> <span class="o">/</span> <span class="nx">width</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="nx">obj</span><span class="p">.</span><span class="nx">destX</span> <span class="o">=</span> <span class="nx">index</span> <span class="o">-</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">destY</span> <span class="o">*</span> <span class="nx">width</span><span class="p">;</span> 
+  <span class="p">})</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span> <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">interpolate</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// This is easeInOutQuad function. See more here https://gist.github.com/gre/1650294</span>
+  <span class="k">return</span> <span class="nx">t</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="p">?</span> <span class="mi">2</span> <span class="o">*</span> <span class="nx">t</span> <span class="o">*</span> <span class="nx">t</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="nx">t</span><span class="p">)</span> <span class="o">*</span> <span class="nx">t</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">lerp</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">t</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// simple linear interpolation.</span>
+  <span class="k">return</span> <span class="nx">b</span> <span class="o">*</span> <span class="nx">t</span> <span class="o">+</span> <span class="nx">a</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="nx">t</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// animation</span>
+<span class="kd">function</span> <span class="nx">animate</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">hasMore</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="kd">var</span> <span class="nx">imgData</span> <span class="o">=</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">getImageData</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">pixels</span> <span class="o">=</span> <span class="nx">imgData</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span> <span class="c1">// one pixel has four components</span>
+
+  <span class="nx">originalArray</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">point</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>          
+    <span class="k">if</span> <span class="p">(</span><span class="nx">currentState</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">point</span><span class="p">.</span><span class="nx">frame</span> <span class="o">&lt;</span> <span class="nx">point</span><span class="p">.</span><span class="nx">timeSpan</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">point</span><span class="p">.</span><span class="nx">frame</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="nx">hasMore</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentState</span> <span class="o">===</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="nx">point</span><span class="p">.</span><span class="nx">frame</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">point</span><span class="p">.</span><span class="nx">frame</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="nx">hasMore</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// get coordinates of transition point</span>
+    <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">interpolate</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">frame</span><span class="o">/</span><span class="nx">point</span><span class="p">.</span><span class="nx">timeSpan</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">lerp</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">point</span><span class="p">.</span><span class="nx">destX</span><span class="p">,</span> <span class="nx">t</span><span class="p">));</span>
+    <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">lerp</span><span class="p">(</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">point</span><span class="p">.</span><span class="nx">destY</span><span class="p">,</span> <span class="nx">t</span><span class="p">));</span>
+
+    <span class="kd">var</span> <span class="nx">pixelIndex</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">*</span> <span class="nx">width</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">point</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">rgba</span><span class="p">();</span> <span class="c1">// gives all a values of 1</span>
+
+    <span class="c1">// update pixel color values for this animation frame</span>
+    <span class="nx">pixels</span><span class="p">[</span><span class="nx">pixelIndex</span> <span class="o">+</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">color</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="nx">pixels</span><span class="p">[</span><span class="nx">pixelIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">color</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+    <span class="nx">pixels</span><span class="p">[</span><span class="nx">pixelIndex</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nx">color</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+    <span class="nx">pixels</span><span class="p">[</span><span class="nx">pixelIndex</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="nx">color</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">255</span><span class="p">;</span>
+  <span class="p">});</span>
+
+  <span class="nx">ctx</span><span class="p">.</span><span class="nx">putImageData</span><span class="p">(</span><span class="nx">imgData</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// redraw img for animation frame</span>
+
+  <span class="c1">// recursion</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasMore</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">currentState</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">-</span> <span class="nx">currentState</span><span class="p">;</span>
+    <span class="nx">hasMore</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">),</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
